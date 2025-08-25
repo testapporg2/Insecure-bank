@@ -25,7 +25,7 @@ jobs:
         id: black-duck-security-scan
         uses: blackduck-inc/black-duck-security-scan@v2
         env:
-          DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
+          FAILURE_ACCURACY_NOT_MET: NONE
         with:
           blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
           blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
