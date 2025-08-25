@@ -1,4 +1,4 @@
-name: Black Duck Security Scan
+name: Black Duck Scan
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ on:
   workflow_dispatch: {}
 jobs:
   blackducksca:
-    runs-on: [self-hosted, tithi]
+    runs-on: self-hosted
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
