@@ -1,4 +1,4 @@
-name: Black Duck Scan
+name: Black Duck Security Scan
 on:
   push:
     branches:
