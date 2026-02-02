@@ -1,6 +1,6 @@
 # Quickstart: Black Duck Security Scan Action with blackducksca:
-#     https://documentation.blackduck.com/bundle/bridge/page/documentation/t_github-blackduck-quickstart.htmll
-name: Black Duck Security Scan1
+#     https://documentation.blackduck.com/bundle/bridge/page/documentation/t_github-blackduck-quickstart.html
+name: Black Duck Security Scan
 on:
   push:
     branches:
@@ -19,7 +19,7 @@ on:
   workflow_dispatch: {}
 jobs:
   blackducksca:
-    runs-on: [self-hosted, tbrunner1, tbrunner]
+    runs-on: self-hosted
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
@@ -29,6 +29,6 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
           ### SCANNING: Required fields
-          blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
-          blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
+          blackducksca_url: ${{ vars.BLACKDUCKSCA_URL_NEW }}
+          blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN_NEW }}
           
