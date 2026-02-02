@@ -19,7 +19,7 @@ on:
   workflow_dispatch: {}
 jobs:
   blackducksca:
-    runs-on: [self-hosted, tbrunner1]
+    runs-on: tbrunner
     steps:
       - name: Checkout Source
         uses: actions/checkout@v4
