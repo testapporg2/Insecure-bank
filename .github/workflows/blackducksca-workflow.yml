@@ -29,6 +29,5 @@ jobs:
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
           ### SCANNING: Required fields
-          blackducksca_url: ${{ vars.BLACKDUCKSCA_URL_NEW }}
-          blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN_NEW }}
-          
+          blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
+          blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
